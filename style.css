@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('Screenshot_2025-07-22-22-11-54-75.jpg'); /* Ảnh nền */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Giữ ảnh nền cố định khi cuộn */
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.85); /* Nền đen trong suốt */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2); /* Hiệu ứng neon xanh */
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    backdrop-filter: blur(5px); /* Hiệu ứng làm mờ phía sau */
+    border: 1px solid rgba(0, 255, 255, 0.5); /* Viền xanh neon */
+}
+
+.header .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #00ffff; /* Viền avatar */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Hiệu ứng glow cho logo */
+}
+
+.header h1 {
+    color: #00ffff; /* Màu xanh neon cho tiêu đề */
+    margin-top: 0;
+    font-size: 2.2em;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+.header p {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.key-section {
+    margin-bottom: 25px;
+}
+
+.key-section label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #00ffff;
+    font-weight: bold;
+}
+
+.key-input {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #00ffff;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    color: #00ff00; /* Màu xanh lá nổi bật cho key */
+    font-size: 1.5em;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    transition: all 0.3s ease;
+    cursor: text; /* Cho phép người dùng chọn và copy */
+}
+
+.key-input:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+}
+
+.btn {
+    display: inline-flex; /* Để icon và chữ nằm trên cùng 1 hàng */
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 5px; /* Khoảng cách giữa các nút */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+.primary-btn {
+    background-color: #00bfff; /* Deep Sky Blue */
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+}
+
+.primary-btn:hover {
+    background-color: #009acd; /* Darker blue on hover */
+    box-shadow: 0 0 20px rgba(0, 191, 255, 1);
+}
+
+.secondary-btn {
+    background-color: #6a0dad; /* Dark Violet */
+    box-shadow: 0 0 15px rgba(106, 13, 173, 0.7);
+}
+
+.secondary-btn:hover {
+    background-color: #5500aa; /* Darker violet on hover */
+    box-shadow: 0 0 20px rgba(106, 13, 173, 1);
+}
+
+.music-btn {
+    background-color: #32cd32; /* Lime Green */
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.7);
+}
+
+.music-btn:hover {
+    background-color: #228b22; /* Forest Green on hover */
+    box-shadow: 0 0 20px rgba(50, 205, 50, 1);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.status-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: none; /* Ban đầu ẩn đi */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.status-message.show {
+    display: block;
+    opacity: 1;
+}
+
+.status-message.success {
+    background-color: rgba(0, 128, 0, 0.6); /* Green for success */
+    color: #fff;
+    border: 1px solid #00ff00;
+}
+
+.status-message.error {
+    background-color: rgba(128, 0, 0, 0.6); /* Red for error */
+    color: #fff;
+    border: 1px solid #ff0000;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #a0a0a0;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .key-input {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
